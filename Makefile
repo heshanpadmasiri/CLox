@@ -1,16 +1,19 @@
-CC ?= clang
+CC?=gcc
 CFLAGS ?=
 DEPS=$(wildcard *.h)
 TARGETS=build test clean
+OBJS=chunk.o memory.o main.o
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-%.exe: %.o
-	$(CC) -o $*.exe $*.o
+build: main.exe
 
 clean:
 	rm -rf *.o
 	rm -rf *.exe
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+%.exe: $(OBJS)
+	$(CC) -o $@ $(OBJS)
 
 .PHONY : $(TARGETS)
