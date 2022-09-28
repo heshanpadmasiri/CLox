@@ -2,7 +2,7 @@ CC?=gcc
 CFLAGS ?=
 DEPS=$(wildcard *.h)
 TARGETS=build test clean
-OBJS=scanner.o chunk.o compiler.o debug.o memory.o value.o vm.o main.o
+OBJS=scanner.o chunk.o compiler.o debug.o memory.o object.o value.o vm.o main.o
 
 build: main.exe
 
