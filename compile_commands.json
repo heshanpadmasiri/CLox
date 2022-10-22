@@ -1,0 +1,122 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "scanner.o",
+      "scanner.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/scanner.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/scanner.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "chunk.o",
+      "chunk.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/chunk.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/chunk.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "compiler.o",
+      "compiler.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/compiler.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/compiler.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "debug.o",
+      "debug.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/debug.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/debug.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "memory.o",
+      "memory.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/memory.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/memory.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "object.o",
+      "object.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/object.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/object.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "table.o",
+      "table.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/table.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/table.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "value.o",
+      "value.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/value.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/value.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "vm.o",
+      "vm.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/vm.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/vm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/Users/heshanpadmasiri/Projects/CLox",
+    "file": "/Users/heshanpadmasiri/Projects/CLox/main.c",
+    "output": "/Users/heshanpadmasiri/Projects/CLox/main.o"
+  }
+]
