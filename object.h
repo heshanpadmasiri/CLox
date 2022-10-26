@@ -4,8 +4,15 @@
 #include "common.h"
 #include "value.h"
 #include "chunk.h"
+#include "table.h"
 
 #define OBJ_TYPE(value) (AS_OBJ(value)->type)
+
+#define IS_INSTANCE(value) isObjType(value, OBJ_INSTANCE)
+#define AS_INSTANCE(value) ((ObjInstance*)AS_OBJ(value))
+
+#define IS_CLASS(value) isObjType(value, OBJ_CLASS);
+#define AS_CLASS(value) ((ObjClass*)AS_OBJ(value))
 
 #define IS_CLOSURE(value) isObjType(value, OBJ_CLOSURE)
 #define AS_CLOSURE(value) ((ObjClosure*)AS_OBJ(value))
@@ -21,8 +28,10 @@
 #define AS_CSTRING(value) (((ObjString*)AS_OBJ(value))->chars)
 
 typedef enum {
+    OBJ_CLASS,
     OBJ_CLOSURE,
     OBJ_FUNCTION,
+    OBJ_INSTANCE,
     OBJ_NATIVE,
     OBJ_STRING,
     OBJ_UPVALUE
@@ -30,6 +39,7 @@ typedef enum {
 
 struct Obj {
     ObjType type;
+    bool isMarked;
     struct Obj* next;
 };
 
@@ -68,6 +78,20 @@ typedef struct {
     ObjUpvalue** upvalues;
     int upvalueCount;
 } ObjClosure;
+
+typedef struct {
+    Obj obj;
+    ObjString* name;
+} ObjClass;
+
+typedef struct {
+    Obj obj;
+    ObjClass* klass;
+    Table fields;
+} ObjInstance;
+
+ObjClass* newClass(ObjString* name);
+ObjInstance* newInstance(ObjClass* klass);
 
 ObjClosure* newClosure(ObjFunction* function);
 ObjFunction* newFunction();
