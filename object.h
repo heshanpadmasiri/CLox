@@ -14,7 +14,7 @@
 #define IS_INSTANCE(value) isObjType(value, OBJ_INSTANCE)
 #define AS_INSTANCE(value) ((ObjInstance*)AS_OBJ(value))
 
-#define IS_CLASS(value) isObjType(value, OBJ_CLASS);
+#define IS_CLASS(value) isObjType(value, OBJ_CLASS)
 #define AS_CLASS(value) ((ObjClass*)AS_OBJ(value))
 
 #define IS_CLOSURE(value) isObjType(value, OBJ_CLOSURE)
