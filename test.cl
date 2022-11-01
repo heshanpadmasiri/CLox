@@ -1,18 +1,30 @@
-class Doughnut {
-  cook() {
-    print "Dunk in the fryer.";
-    this.finish("sprinkles");
+class Zoo {
+  init() {
+    this.aardvark = 1;
+    this.baboon   = 1;
+    this.cat      = 1;
+    this.donkey   = 1;
+    this.elephant = 1;
+    this.fox      = 1;
   }
-
-  finish(ingredient) {
-    print "Finish with " + ingredient;
-  }
+  ant()    { return this.aardvark; }
+  banana() { return this.baboon; }
+  tuna()   { return this.cat; }
+  hay()    { return this.donkey; }
+  grass()  { return this.elephant; }
+  mouse()  { return this.fox; }
+}
+var zoo = Zoo();
+var sum = 0;
+var start = clock();
+while (sum < 100000000) {
+  sum = sum + zoo.ant()
+            + zoo.banana()
+            + zoo.tuna()
+            + zoo.hay()
+            + zoo.grass()
+            + zoo.mouse();
 }
 
-class Cruller < Doughnut {
-  finish(ingredient) {
-    // No sprinkles, always icing.
-    super.finish("icing");
-  }
-}
-
+print clock() - start;
+print sum;
